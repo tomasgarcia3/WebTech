@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies-Tomas Garcia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <!--New CSS: I have added the clear property to the images set with the float property. I learned this to improve the layout of my page. Learned with https://www.w3schools.com/css/css_float_clear.asp. -->>
+    <!--New HTML: I have also added the Table property in html to set up my contact information. Learned with https://www.w3schools.com/html/html_tables.asp. -->>
+    <style>
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            color:rgb(22, 104, 15);
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+            color: blue;
+            font-family: cursive;
+        }
+        h2{
+            font-family: 'Inconsolata', serif;
+            text-align: left;
+            color: red;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            size: 1.2em;
+            text-indent: 30px;
+        }
+        img{
+            float: left;
+            margin: 20px;
+        }
+        body{
+            background-color: aquamarine;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .fix-setup{
+            clear: left;
+            /*New CSS property*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Tomas Garcia</h1>
+    <h3>Contacting Information</h3>
+    <table>
+        <tr>
+            <td>Github:</td>
+            <td><a href="https://github.com/tomasgarcia3" target="_blank">tomasgarcia3</a></li></td>
+        </tr>
+        <tr>
+            <td>Instagram:</td>
+            <td><a href="https://instagram.com/tomasgarciap_/" target="_blank">tomasgarciap_</a></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><a href = "mailto: tgarcia1@babson.edo\u">tgarcia1@babson.edu</a></td>
+        </tr>
+    </table>
+    <h3>Quick Links</h3>
+    <ul>
+        <li> <a href="#about-me">About Me</a></li>
+        <li><a href="#my-hobbies">My Hobbies</a></li>
+    </ul>
+    <hr>
+    <div>
+        <h2 id="about-me">About Me</h2>
+        <img src="/images/MyImage.jpeg" alt="picture of myself" tittle='myself' width="100">
+        <p>I chose <a href="https://www.babson.edu/" target="_blank">Babson College</a> because it is the #1 entrepreneurship school in the US.</p>
+    </div>
+    <div class= 'fix-setup'>
+        <hr>
+        <h2 id="my-hobbies">My Hobbies</h2>
+        <a href="https://www.ikointl.com/"><img src="https://cdn.ikointl.com/sites/default/files/1_crowded_spot_dr.jpg" alt="my hobby" width="200"></a>
+        <p>My favorite hobby is <a href="https://www.ikointl.com/"><strong>Kitesurfing</strong></a>.</p>
+    </div>
+    <div class= 'fix-setup'>
+        <hr>
+        <a href="sitemap.html">My Work in WebTech</a>
+    </div>
+</body>
+</html>
+
