@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Exercise 04</title>
-    <style>
+    <title>Exercise 06</title>
+    <style type='text/css'>
       h1 {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: navy;
@@ -31,7 +31,34 @@
         padding: 10px;
         margin: 30px 30px 10px 10px;
       }
-
+      #bordered {
+        border:red dotted 3px;
+      }
+      #heading_color{
+        color: seagreen;
+      }
+      h3.blue_font {
+        color: blue;
+        font-style: italic;
+        text-decoration: underline;
+      }
+      p.blue_font {
+        color: blue;
+        font-style: italic;
+        text-decoration: underline;
+      }
+      #yellow_background{
+        background-color: yellow;
+      }
+      #green_background{
+        background-color: green;
+      }
+      #lime_background{
+        background-color: lime;
+      }
+      span.font-size{
+        font-size: 1.5em;
+      }
 
     </style>
   </head>
@@ -39,27 +66,34 @@
     <h1>This line demonstrates h1</h1>
     <h2>This line demonstrates h2</h2>
     <h3>This line shows how h3 will be different from h1 and h2</h3>
-    <hr />
-    <h1>Quote One from Winston Churchill</h1>
-    <p>
-      Criticism may not be agreeable, but it is necessary. It fulfils the same
-      function as pain in the human body. It calls attention to an unhealthy
-      state of things.
-    </p>
-    <h3>Quote Two from Winston Churchill</h3>
+    <hr/>
+    <div id='yellow_background'>
+      <h1>Quote One from <span class='font-size'>W</span>inston <span class='font-size'>C</span>hurchill</h1>
+      <p class='blue_font'>
+        Criticism may not be agreeable, but it is necessary. It fulfils the same
+        function as pain in the human body. It calls attention to an unhealthy
+        state of things.
+      </p>
+    </div>
+    <div id='green_background'>
+      <h3 class='blue_font'>Quote Two from <span class='font-size'>W</span>inston <span class='font-size'>C</span>hurchill</h3>
     <p>
       Courage is rightly esteemed the first of human qualities... because it is
       the quality which guarantees all others. Courage is what it takes to stand
       up and speak; courage is also what it takes to sit down and listen.
     </p>
-    <h2>Quote Three from Winston Churchill</h2>
+    </div>
+    <div id='lime_background'>
+      <h2 id='heading-color'>Quote Three from <span class='font-size'>W</span>inston <span class='font-size'>C</span>hurchill</h2>
     <h3>This paragraph will have a border</h3>
-    <p>
+    <p id="bordered">
       Continuous effort - not strength or intelligence - is the key to unlocking
       our potential.
     </p>
-    <hr />
-    <p>
+    </div>
+
+    <hr/>
+    <p class='blue_font'>
       The tiger (Panthera tigris) is the largest cat species, reaching a total
       body length of up to 3.3 metres (11 ft) and weighing up to 306 kg (670
       lb). It is the third largest land carnivore (behind only the Polar bear
@@ -89,6 +123,6 @@
       the area estimated in the mid-1990s.[7]
     </p>
     <hr>
-    <a href="/HomeWork1/sitemap.html">My Work in WebTech</a>
+    <a href="sitemap.html">My Work in WebTech</a>
   </body>
 </html>
