@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Ex09-Forms</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: antiquewhite;
+        padding: 10px 10px;
+      }
+      div.space {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>In-Class Exercise 09 - HTML From</h1>
+    <form method="post" action="https://oim-apis.herokuapp.com/form2">
+      <div class="space">
+        <label for="LastName">Last Name:</label>
+        <input
+          id="LastName"
+          type="text"
+          name="Last Name"
+          placeholder="Last name"
+        />
+      </div>
+      <div class="space">
+        <label for="FirstName">First Name:</label>
+        <input
+          id="FirstName"
+          type="text"
+          name="First Name"
+          placeholder="First name"
+        />
+      </div>
+      <div class="space">
+        <label for="Email">Email:</label>
+        <input
+          id="Email"
+          type="text"
+          name="Email"
+          placeholder="Email Address"
+        />
+      </div>
+      <div class="space">
+        Gender:
+        <label>
+          Male
+          <input type="radio" name="gender" value="male" />
+        </label>
+        <label>
+          Female
+          <input type="radio" name="gender" value="female" />
+        </label>
+      </div>
+      <div class="space">My favorite topics are:</div>
+      <div>
+        <input type="checkbox" name="topics" id="HTML" value="HTML" />
+        <label for="HTML">Basic HTML</label>
+      </div>
+      <div>
+        <input type="checkbox" name="topics" id="CSS" value="CSS" />
+        <label for="CSS">CSS</label>
+      </div>
+      <div>
+        <input type="checkbox" name="topics" id="Tables" value="Tables" />
+        <label for="Tables">Tables</label>
+      </div>
+      <div class="space">
+        <div>
+          <label for="select-grade"
+            >Which grade do you expect to receive?</label
+          >
+          <select name="grade" id="select-grade">
+            <option value="A">A</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="B-">B-</option>
+            <option value="C+">C+</option>
+          </select>
+        </div>
+      </div>
+      <div class="space">
+          <div>
+              <label for="comments">Leave a Reply</label>
+          </div>
+          <div>
+              <textarea name="comments" id="comments" cols="25" rows="5" placeholder="Enter your comments here..."></textarea>
+          </div>
+      </div>
+      <div>
+        <button type="submit">
+            <img src="/images/mailbox.png" alt="submit button" height="30">
+        </button>
+        <button type="reset">
+            <img src="/images/reset.png" alt="reset button" height="30">
+        </button>
+      </div>
+    </form>
+    <hr />
+    <a href="sitemap.html">My Work in WebTech</a>
+  </body>
+</html>
