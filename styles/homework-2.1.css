@@ -1,0 +1,43 @@
+img {
+    width: 150px;
+}
+
+table{
+    border: solid;
+    margin-right: auto; margin-left: auto;
+    border-collapse: collapse;
+    border-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#tittle{
+    font-size: 32px;
+}
+
+td{
+    border: solid;
+    border-color: lightgrey;
+}
+
+.column1{
+    width: 15%;
+    font-weight: bold;
+}
+
+.w2{
+    width: 30%;
+}
+
+.w3{
+    width: 10%;
+}
+
+.button{
+    background: linear-gradient(#51a9ee,#147bcd);
+    color: white;
+}
+
+.discounted{
+    color: red;
+}
