@@ -1,30 +1,83 @@
-table{
-    width: 100%;
-    border-collapse: collapse;
+/*Learned about navegation bars at https://www.w3schools.com/css/css_navbar_horizontal.asp*/
+
+ul{
     font-family: Arial, Helvetica, sans-serif;
-}
-
-#header{
-    background-color: black;
-    color: white;
-    margin-right: auto; margin-left: auto;
-    text-align: center;
     margin: 0;
-    font-weight: bold;
-    padding: 10px;
+    padding: 0;
+    list-style-type: none;
+    background-color: black;
+    overflow: hidden;
+    top:0;
 }
 
-td{
-    border: solid;
-    border-color: lightgrey;
-    border-width: 1px;
+.header{
+    background-color: black;
+    width: 100%;
+}
+
+li{
+    float: left;
+    border-right: 1px solid lightgray;
+}
+
+li:last-child{
+    border-right: none;
+}
+
+li{
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 14px 16px;
 }
 
 #icon{
-    width: 30px;
+    width: 15px;
     height: auto;
+}
+
+.dropbtn, .page{
+    background-color: black;
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    width: 100%;
+}
+
+.page a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.page:hover{
+    background-color: aqua;
+}
+
+/* Learned about dropdown css on w3 Schools*/
+.dropdown-links {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+  }
+  .dropdown-links a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-links a:hover {
+    background-color:white;
+    color:black;
+  }
+  .dropdown:hover .dropdown-links {
+    display: block;
+  }
+
+table{
+    width: 100%;
 }
 
 #left{
@@ -41,3 +94,6 @@ td{
     border: 0ch;
     font-size: x-large;
 }
+
+
+/* Not Enough time to finish*/
