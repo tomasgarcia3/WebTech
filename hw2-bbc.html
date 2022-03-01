@@ -8,72 +8,78 @@
     <link rel="stylesheet" href="styles/hw2-bbc.css" />
   </head>
   <body>
-    <div class="header">
+    <div>
       <ul>
-        <li>
+        <li class="page">
           <a href="https://www.bbc.com/"
-            ><img src="/images/blq-orbit-blocks_white.svg" alt="bbc-logo"
+            ><img id="bbc" src="/images/blq-orbit-blocks_white.svg" alt="bbc-logo"
           /></a>
         </li>
-        <li>
-          <button class="page">
+        <li class="page">
             <a href="https://account.bbc.com/signin?">
               <img id="icon" src="/images/bbc_icon.svg" alt="Signin-icon" />
               Sign in</a
             >
-          </button>
         </li>
-        <li>
-          <button class="page"><a href="https://www.bbc.com/">Home</a></button>
+        <li class="page">
+          <a href="https://www.bbc.com/">Home</a></button>
         </li>
-        <li>
-          <button class="page">
+        <li class="page">
+
             <a href="https://www.bbc.com/news">News</a>
-          </button>
+
         </li>
-        <li>
-          <button class="page">
+        <li class="page">
+
             <a href="https://www.bbc.com/sport">Sport</a>
-          </button>
+
         </li>
-        <li>
-          <button class="page">
+        <li class="page">
+
             <a href="https://www.bbc.com/reel">Reel</a>
-          </button>
+
         </li>
-        <li>
-          <button class="page">
+        <li class="page">
+
             <a href="https://www.bbc.com/worklife">Worklife</a>
-          </button>
+
         </li>
-        <li>
-          <button class="page">
+        <li class="page">
+
             <a href="https://www.bbc.com/travel">travel</a>
-          </button>
+
         </li>
-        <li>
-          <button class="page">
+        <li class="page">
+
             <a href="https://www.bbc.com/future">Future</a>
-          </button>
+
         </li>
-        <li>
-          <button class="page">
+        <li class="page">
+
             <a href="https://www.bbc.com/culture">Culture</a>
-          </button>
+
         </li>
+        <!--Learned about dropdown css on w3 Schools https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar -->
         <li>
-          <div class="dropdown">
-            <button class="dropbtn">More</button>
+          <li class="dropdown">
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">More</a>
             <div class="dropdown-links">
               <a href="https://www.bbc.com/culture/music">Music</a>
               <a href="https://www.bbc.co.uk/schedules/p00fzl9m">TV</a>
               <a href="https://www.bbc.com/weather">Weather</a>
               <a href="https://www.bbc.co.uk/sounds">Sounds</a>
             </div>
-          </div>
+            </li>
+          </li>
         </li>
         <li>
-          <input id="Search" type="text" name="Search" placeholder="Search" />
+          <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit">Submit</button>
+            </form>
+          </div>  
         </li>
       </ul>
     </div>

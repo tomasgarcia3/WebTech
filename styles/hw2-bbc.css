@@ -1,18 +1,16 @@
 /*Learned about navegation bars at https://www.w3schools.com/css/css_navbar_horizontal.asp*/
 
-ul{
+body{
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    background-color: black;
-    overflow: hidden;
-    top:0;
 }
 
-.header{
+ul{
+    list-style-type: none;
     background-color: black;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
 }
 
 li{
@@ -24,10 +22,9 @@ li:last-child{
     border-right: none;
 }
 
-li{
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+#bbc{
+    width: 60px;
+    height: auto;
 }
 
 #icon{
@@ -35,46 +32,48 @@ li{
     height: auto;
 }
 
-.dropbtn, .page{
-    background-color: black;
-    padding: 5px;
-    font-size: 15px;
-    border: none;
-    color: white;
-    width: 100%;
-}
+/* Learned about dropdown css on w3 Schools https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar*/
 
-.page a{
+li a, .dropbtn{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    color: white;
-    display: block;
 }
 
-.page:hover{
-    background-color: aqua;
+li:hover, .dropbtn:hover .dropbtn{
+    background-color: aquamarine;
 }
 
-/* Learned about dropdown css on w3 Schools*/
+li.dropbtn{
+    display: inline-block;
+}
+
 .dropdown-links {
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     min-width: 160px;
     z-index: 1;
   }
   .dropdown-links a {
-    color: white;
-    padding: 10px 15px;
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-align: left;
   }
   .dropdown-links a:hover {
-    background-color:white;
-    color:black;
+    background-color:rgb(201, 201, 201);
   }
   .dropdown:hover .dropdown-links {
     display: block;
   }
+
+/* Learned about search bars css on w3 Schools https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_searchbar2*/
+
 
 table{
     width: 100%;
