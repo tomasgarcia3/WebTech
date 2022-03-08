@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 13</title>
+  </head>
+  <body>
+    <h1>Manipulating Styles and Images</h1>
+    <div>
+      <img src="images/tiger1.jpg" alt="Tiger 1" title="Tiger is walking" width="400" />
+    </div>
+
+    <script>
+      function enlargeImage(){
+        //pseudo-code
+        //1. get the image dor enlarge
+        //2. get the width/height of the img
+        //3. multiply the value by 1.5,
+        //4. assign the new value back to the img width
+        const img1 = document.querySelector("img");
+        let w = img1.width;
+        w = w * 1.5;
+        img1.width = w;
+      }
+      function reSizeImage(){
+        const img1 = document.querySelector("img");
+        let w = img1.width;
+        console.log(w)
+        w = w / 1.5
+        img1.width = w;
+      }
+      document.querySelector("img").onmouseout = reSizeImage;
+      document.querySelector("img").onmouseover = enlargeImage;
+    </script>
+  </body>
+</html>
