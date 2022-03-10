@@ -10,8 +10,11 @@
     <div>
       <img src="images/tiger1.jpg" alt="Tiger 1" title="Tiger is walking" width="400" />
     </div>
+    <hr/>
+    <a href="sitemap.html">My Work in WebTech</a>
 
     <script>
+
       function enlargeImage(){
         //pseudo-code
         //1. get the image dor enlarge
@@ -26,8 +29,7 @@
       function reSizeImage(){
         const img1 = document.querySelector("img");
         let w = img1.width;
-        console.log(w)
-        w = w / 1.5
+        w = w / 1.5;
         img1.width = w;
       }
       document.querySelector("img").onmouseout = reSizeImage;
