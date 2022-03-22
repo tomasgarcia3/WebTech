@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 15</title>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <form id="Calculator" action="">
+      <fieldset>
+        <div>x = <input type="text" name="num1" id="num1"/></div>
+        <br />
+        <div>y = <input type="text" name="num2" id="num2" /></div>
+        <br />
+        <div>
+          <button type="button" id="add">Add</button>
+          <button type="button" id="subt">Subt</button>
+          <button type="button" id="mult">Mult</button>
+          <button type="button" id="div">Div</button>
+        </div>
+        <p>Result = <span id="result">?</span></p>
+      </fieldset>
+    </form>
+    <script>
+      function add() {
+        // console.log("test");
+        const myForm = document.getElementById("Calculator");
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        const result = document.getElementById("result");
+        result.innerHTML = parseFloat(num1)+parseFloat(num2);
+      }
+      function subtract() {
+        // console.log("test");
+        const myForm = document.getElementById("Calculator");
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        const result = document.getElementById("result");
+        result.innerHTML = parseFloat(num1)-parseFloat(num2);
+      }
+      function multiply() {
+        // console.log("test");
+        const myForm = document.getElementById("Calculator");
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        const result = document.getElementById("result");
+        result.innerHTML = parseFloat(num1)*parseFloat(num2);
+      }
+      function divide() {
+        // console.log("test");
+        const myForm = document.getElementById("Calculator");
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        const result = document.getElementById("result");
+        result.innerHTML = parseFloat(num1)/parseFloat(num2);
+      }
+
+      document.querySelector("#add").onclick = function () {
+        add();
+      };
+      document.querySelector("#subt").onclick = function () {
+        subtract();
+      };
+      document.querySelector("#mult").onclick = function () {
+        multiply();
+      };
+      document.querySelector("#div").onclick = function () {
+        divide();
+      };
+    </script>
+  </body>
+</html>
