@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button>click</button> -->
+    <p id="message"></p>
+    <img src="images/home.jpg" alt="" />
+    <script>
+      function f() {
+        console.log("...starting...");
+        let age = window.prompt("How old are you?");
+        const messageEl = document.getElementById("message");
+        const imageEl = document.querySelector("img");
+        let country = window.prompt("Which country are you in?");
+
+        if (age >= 21 && country == "China") {
+          //   console.log("Yes, you can!");
+          messageEl.innerText = "Yes, you can!";
+          imageEl.src = "images/beaver.jpg";
+        } else {
+          //   console.log("No, you cannot!");
+          messageEl.innerText = "No, you cannot!";
+          imageEl.src = "images/smiley.gif";
+        }
+      }
+
+      document.querySelector("img").onclick = function () {
+        f();
+      };
+    </script>
+  </body>
+</html>

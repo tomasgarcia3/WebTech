@@ -12,7 +12,8 @@
         border: 10px ridge gold;
         display: block;
       }
-      div, img{
+      div,
+      img {
         width: 500px;
         margin: 30px auto;
       }
@@ -20,7 +21,7 @@
   </head>
   <body>
     <h1>Changing image using user input</h1>
-    <img src="" alt="Click here to choose the image" title="" />
+    <img src=" " alt="Click here to choose the image" title="" />
 
     <div>
       Enter the last name of your favorite Celtics player
@@ -31,21 +32,27 @@
         <li>Payton Pritchard</li>
       </ul>
     </div>
-    <hr/>
+    <hr />
     <a href="sitemap.html">My Work in WebTech</a>
     <script>
-      function changeImage(){
-        let selection = prompt("Please enter players last name", );
-        if(selection == 'Brown')
-          document.querySelector("img").src = "/images/jaylen-brown.png";
-        else if (selection == 'Tatum')
-          document.querySelector("img").src = "/images/jayson-tatum.png";
-        else if (selection == 'Horford')
-          document.querySelector("img").src = "/images/al-horford.png";
-        else if (selection == 'Pritchard')
-          document.querySelector("img").src = "/images/payton-pritchard.png";
-        else
-          alert('Wrong entry, try again!')
+      function changeImage() {
+        const selection = prompt("Please enter players last name");
+        const player = document.querySelector("img");
+        const heading = document.querySelector("h1");
+
+        if (selection.toLowerCase === "brown") {
+          player.src = "/images/jaylen-brown.png";
+        } else if (selection.toLowerCase === "tatum") {
+          player.src = "/images/jayson-tatum.png";
+        } else if (selection.toLowerCase === "horford") {
+          player.src = "/images/al-horford.png";
+        } else if (selection.toLocaleLowerCase === "pritchard") {
+          player.src = "/images/payton-pritchard.png";
+        } else {
+          alert("Wrong entry, try again!");
+          player.src = "";
+          return true;
+        }
       }
       document.querySelector("img").onclick = changeImage;
     </script>
