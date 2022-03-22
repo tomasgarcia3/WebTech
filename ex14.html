@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 14
-    </title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 14</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      img {
+        border: 10px ridge gold;
+        display: block;
+      }
+      div, img{
+        width: 500px;
+        margin: 30px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Changing image using user input</h1>
+    <img src="" alt="Click here to choose the image" title="" />
+
+    <div>
+      Enter the last name of your favorite Celtics player
+      <ul>
+        <li>Jaylen Brown</li>
+        <li>Jayson Tatum</li>
+        <li>Al Horford</li>
+        <li>Payton Pritchard</li>
+      </ul>
+    </div>
+    <hr/>
+    <a href="sitemap.html">My Work in WebTech</a>
+    <script>
+      function changeImage(){
+        let selection = prompt("Please enter players last name", );
+        if(selection == 'Brown')
+          document.querySelector("img").src = "/images/jaylen-brown.png";
+        else if (selection == 'Tatum')
+          document.querySelector("img").src = "/images/jayson-tatum.png";
+        else if (selection == 'Horford')
+          document.querySelector("img").src = "/images/al-horford.png";
+        else if (selection == 'Pritchard')
+          document.querySelector("img").src = "/images/payton-pritchard.png";
+        else
+          alert('Wrong entry, try again!')
+      }
+      document.querySelector("img").onclick = changeImage;
+    </script>
+  </body>
 </html>
