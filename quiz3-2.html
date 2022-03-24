@@ -74,18 +74,38 @@
             <button id="check" type="button">Check</button>
           </div>
         </form>
-        <div> <span id="result"> This number is/isn't a multiple of 3. </span></div>
+        <div>
+          <span id="result"> This number is/isn't a multiple of 3. </span>
+        </div>
       </div>
     </div>
     <script>
-      function multiple3(){
+      function multiple3() {
         const result = document.getElementById("result");
-        const x = document.getElementById
-        ("num").value;
-        if (x % 3 == 0){
-          result.innerHTML = "This number, "+x+", is a multiple of 3.";
-        } else{
-          result.innerHTML = "This number, "+x+", is not a multiple of 3.";
+        const x = parseInt(document.getElementById("num").value);
+        const parity = EvenOdd(x);
+        console.log(parity);
+        if (x % 3 == 0) {
+          result.innerHTML =
+            "This number, " +
+            x +
+            ", is an " +
+            parity +
+            " number and a multiple of 3.";
+        } else {
+          result.innerHTML =
+            "This number, " +
+            x +
+            ", is an " +
+            parity +
+            " number and not a multiple of 3.";
+        }
+      }
+      function EvenOdd(x) {
+        if (x % 2 == 0) {
+          return "even";
+        } else {
+          return "odd";
         }
       }
       document.getElementById("check").onclick = multiple3;
