@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quiz 3 - Question 2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        padding: 20px;
+        text-align: center;
+        background-color: #333333;
+        color: #f4f4f4;
+      }
+
+      div {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      li {
+        margin: 10px;
+      }
+
+      button {
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 3px;
+        background-color: #333333;
+        color: #f4f4f4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quiz 3 - Question 2</h1>
+    <div>
+      <p>Use internal JavaScript to implement the features below:</p>
+      <ul>
+        <li>
+          When you enter an integer (e.g. 2022) that is a multiple of 3 and
+          click the button, the text below the button shows "This number, 2022,
+          is a multiple of 3.".
+        </li>
+        <li>
+          When you enter an integer (e.g. 2023) that is not a multiple of 3 and
+          click the button, the text below the button shows "This number, 2023,
+          isn't a multiple of 3.".
+        </li>
+        <li>You don't need to validate the input.</li>
+        <li>
+          (Optional) In addition to above requirements, show the number is an
+          even/odd number.
+        </li>
+      </ul>
+      <div>
+        <form action="">
+          <div>
+            <label>
+              Number:
+              <input maxlength="30" name="number" type="text"
+            /></label>
+            <button type="button">Check</button>
+          </div>
+        </form>
+        <div>This number is/isn't a multiple of 3.</div>
+      </div>
+    </div>
+  </body>
+</html>
