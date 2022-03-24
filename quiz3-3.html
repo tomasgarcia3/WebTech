@@ -67,18 +67,52 @@
       </ul>
     </div>
     <div>
-      <img
+      <img id="Tatum"
         alt="Jayson Tatum's Jersey"
         src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/tatum1.webp"
       />
-      <img
+      <img id="Brown"
         alt="Jaylen Brown's Jersey"
         src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/brown1.webp"
       />
-      <img
+      <img id="Bird"
         alt="Larry Bird's Jersey"
         src="https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/bird1.webp"
       />
     </div>
+    <script>
+      function tatumBack() {
+        document.querySelector("h1").innerHTML = "Jayson Tatum";
+        document.getElementById("Tatum").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/tatum2.webp"
+      }
+      function tatumFront() {
+        document.querySelector("h1").innerHTML = "Let's Go, Celtics";
+        document.getElementById("Tatum").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/tatum1.webp"
+      }
+      document.getElementById("Tatum").onmouseover = tatumBack;
+      document.getElementById("Tatum").onmouseout = tatumFront;
+
+      function brownBack() {
+        document.querySelector("h1").innerHTML = "Jaylen Brown";
+        document.getElementById("Brown").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/brown2.webp"
+      }
+      function brownFront() {
+        document.querySelector("h1").innerHTML = "Let's Go, Celtics";
+        document.getElementById("Brown").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/brown1.webp"
+      }
+      document.getElementById("Brown").onmouseover = brownBack;
+      document.getElementById("Brown").onmouseout = brownFront;
+
+      function birdBack() {
+        document.querySelector("h1").innerHTML = "Larry Bird";
+        document.getElementById("Bird").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/bird2.webp"
+      }
+      function birdFront() {
+        document.querySelector("h1").innerHTML = "Let's Go, Celtics";
+        document.getElementById("Bird").src = "https://raw.githubusercontent.com/OIM3690/resources/main/templates/images/bird1.webp"
+      }
+      document.getElementById("Bird").onmouseover = birdBack;
+      document.getElementById("Bird").onmouseout = birdFront;
+    </script>
   </body>
 </html>

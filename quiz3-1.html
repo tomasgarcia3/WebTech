@@ -65,9 +65,22 @@
       </ul>
       <div>
         Color Scheme:
-        <button>DARK</button>
-        <button>LIGHT</button>
+        <button id="dark">DARK</button>
+        <button id="light">LIGHT</button>
       </div>
     </div>
+    <script>
+      function darkButton() {
+        document.querySelector("h1").style.backgroundColor = "black";
+        document.querySelector("h1").style.color = "white";
+      }
+      document.getElementById("dark").onclick = darkButton;
+
+      function lightButton() {
+        document.querySelector("h1").style.backgroundColor = "lightgrey";
+        document.querySelector("h1").style.color = "black";
+      }
+      document.getElementById("light").onclick = lightButton;
+    </script>
   </body>
 </html>
