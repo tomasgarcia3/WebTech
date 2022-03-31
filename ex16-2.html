@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Converter</title>
+  </head>
+  <body>
+    <h1>Celsius Fahrenheit Converter</h1>
+    <form action="converter" id="converter">
+      <div>Celsius: <input type="text" name="cel" id="cel" /></div>
+      <br />
+      <div>Fahrenheit: <input type="text" name="far" id="far" /></div>
+      <br />
+      <div>
+        <button type="button" id="convert">Convert</button>
+        <button type="button" id="clear">Clear</button>
+      </div>
+    </form>
+    <script>
+      function converter() {
+        const celInput = document.getElementById("cel");
+        const farInput = document.getElementById("far");
+        if(celInput.value.length > 0 && farInput.value.length > 0){
+            alert('Must enter only one input')
+            return false
+        } else{
+            if (isNaN(celInput.value) || isNaN(farInput.value)){
+                alert('Must input number!')
+                return false
+            }else if(celInput.value.length > 0){
+                cel = celInput.value*(9/5) + 32
+                farInput.value = cel
+                return true
+            }else{
+                far = (farInput.value-32) * (5/9)
+                celInput.value = far
+                return true
+            }
+        }
+      }
+
+      function clear() {
+        document.getElementById("converter").reset();
+      }
+
+      document.getElementById("convert").onclick = function () {
+        converter();
+      };
+      document.getElementById("clear").onclick = function () {
+        clear();
+      };
+    </script>
+  </body>
+</html>
