@@ -66,21 +66,20 @@
     </form>
     <script>
       const myForm = document.getElementById("my-form");
-      const colors = document.getElementById("my-form").elements["colors"];
+      const colors = myForm["colors"];
       function changeColor() {
         let userChoice;
         for (let i = 0; i < colors.length; i++) {
           const color = colors[i].value;
-          if (color[i].checked) {
+          if (colors[i].checked) {
             userChoice = color;
           }
         }
-        document.querySelector("form").style.backgroundColor = userChoice;
+        document.querySelector('form').style.backgroundColor = userChoice;
       }
-
-      document.getElementById('change-btn').onclick = function(){
-        changeColor()
-      }
+      document.getElementById("change-btn").onclick = function () {
+        changeColor();
+      };
     </script>
   </body>
 </html>
