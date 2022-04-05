@@ -64,6 +64,8 @@
         <input id="clear-btn" type="reset" value="Clear" />
       </div>
     </form>
+    <hr/>
+    <a href="sitemap.html">My Work in WebTech</a>
     <script>
       const myForm = document.getElementById("my-form");
 
@@ -82,23 +84,24 @@
 
       const magazines = myForm["mags"];
       function changeText() {
-        let userChoice;
+        let userChoice = ""
         for (let i = 0; i < magazines.length; i++) {
           const magazine = magazines[i].value;
           if (magazines[i].checked) {
-            userChoice = magazine;
+            userChoice += magazine + "\n";
           }
         }
-        document.getElementById('result').innerHTML = UserChoice;
+        myForm["result"].value = userChoice;
       }
 
 
       document.getElementById("change-btn").onclick = function () {
         changeColor();
+        changeText();
       };
 
       function clear(){
-        document.querySelector('form').style.backgroundColor = Silver;
+        myForm.style.backgroundColor = "silver";
       }
 
       document.getElementById("clear-btn").onclick = function () {

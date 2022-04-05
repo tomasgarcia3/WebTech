@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array for loops</title>
+  </head>
+  <body>
+    <h1>Array and <code>for</code> loops</h1>
+    <p>Sum up all odd integers from 1 to 100</p>
+    <p id="result"></p>
+    <p>Product of all integers from 1 to 100</p>
+    <p id="result1"></p>
+    <button>Calculate</button>
+    <script>
+      function calc() {
+        const resultEL = document.getElementById("result");
+        let result = 0;
+        for (let i = 1; i <= 100; i++) {
+          if (i % 2 == 0) {
+            result += i;
+          }
+          resultEL.innerText = result;
+        }
+      }
+      function calc1() {
+        const resultEL = document.getElementById("result1");
+        let result = 1;
+        for (let i = 1; i <= 100; i++) {
+          result *= i;
+        }
+        resultEL.innerText = result;
+      }
+
+      document.querySelector("button").onclick = function () {
+        calc();
+        calc1();
+      };
+    </script>
+  </body>
+</html>
