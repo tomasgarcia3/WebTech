@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Processing using JavaScript</title>
+  </head>
+  <body>
+    <canvas height="333" id="original-canvas" width="500">
+      Your browser does not support the HTML5 canvas tag.
+      <img alt="class" id="tiger" src="images/tiger1.jpg" width="500" />
+    </canvas>
+    <canvas height="333" id="myCanvas" width="500">
+      Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <div>
+      <button id="btn-1">Change</button>
+      <button id="btn-2">Grayscale</button>
+      <button id="btn-3">Negative</button>
+      <button id="btn-4">Other</button>
+      <h2 id="rgb-info"></h2>
+    </div>
+
+    <script>
+      const tigerImage = document.getElementById("tiger");
+      const originalCanvas = document.getElementById("original-canvas");
+      const rgbInfo = document.getElementById("rgb-info");
+
+      window.onload = function () {
+        originalCanvas.getContext("2d").drawImage(tigerImage, 0, 0);
+      };
+
+      function pick(event) {
+        const x = event.layerX;
+        const y = event.layerY;
+        const pixel = originalCanvas.getContext("2d").getImageData(x, y, 1, 1);
+        const pixelData = pixel.data;
+        const rgba =
+          "rgba(" +
+          pixelData[0] +
+          ", " +
+          pixelData[1] +
+          ", " +
+          pixelData[2] +
+          ", " +
+          pixelData[3] / 255 +
+          ")";
+        rgbInfo.style.background = rgba;
+        rgbInfo.textContent = rgba;
+        rgbInfo.style.color = "white";
+      }
+      originalCanvas.addEventListener("mousemove", pick);
+
+      const c = document.getElementById("myCanvas");
+      const ctx = c.getContext("2d");
+
+      function changePic() {
+        ctx.drawImage(tigerImage, 0, 0);
+        const imgData = ctx.getImageData(0, 0, c.width, c.height);
+
+        // create red channel filter by removing all the other colors, aka. set other colors to 0
+        for (let i = 0; i < imgData.data.length; i += 4) {
+          // imgData.data[i] = 0; // imgData.data[i] is the red channel value of each pixel
+          //   imgData.data[i + 1] = 0; // Green
+          imgData.data[i + 2] = 128; // B
+        }
+        ctx.putImageData(imgData, 0, 0);
+      }
+
+      document.getElementById("btn-1").onclick = changePic;
+
+      function grayscale() {
+        ctx.drawImage(tigerImage, 0, 0);
+        const imgData = ctx.getImageData(0, 0, c.width, c.height);
+
+        // To create a grayscale filter, we need to change R/G/B of each pixel to the average of RGB values of the same pixel
+        for (let i = 0; i < imgData.data.length; i += 4) {
+          // 1. calculate the average of RGB
+          let avg =
+            (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3;
+
+          // 1.5. a little twist
+          // avg = avg * 2;
+          if (avg > 75) {
+            avg = 255;
+          } else {
+            avg = 0;
+          }
+
+          // 2. set R = avg
+          imgData.data[i] = avg;
+
+          //    set G = avg
+          imgData.data[i + 1] = avg;
+
+          //    set B = avg
+          imgData.data[i + 2] = avg;
+        }
+        ctx.putImageData(imgData, 0, 0);
+      }
+
+      document.getElementById("btn-2").onclick = grayscale;
+
+      function negative() {
+        ctx.drawImage(tigerImage, 0, 0);
+        const imgData = ctx.getImageData(0, 0, c.width, c.height);
+
+        // To create a negative filter, change each of R/G/B to the opposite of its original value, aka. opposite = 255 - the original value
+        for (let i = 0; i < imgData.data.length; i += 4) {
+          imgData.data[i] = 255 - imgData.data[i];
+          imgData.data[i + 1] = 255 - imgData.data[i + 1];
+          imgData.data[i + 2] = 255 - imgData.data[i + 2];
+        }
+        ctx.putImageData(imgData, 0, 0);
+      }
+
+      document.getElementById("btn-3").onclick = negative;
+
+      function otherFilter() {
+        ctx.drawImage(tigerImage, 0, 0);
+        const imgData = ctx.getImageData(0, 0, c.width, c.height);
+
+        // To create a blur filter, set the pixel to average of the pixels around it. A simple version: set the pixel to average of the 4 pixels after it.
+        for (let i = 0; i < imgData.data.length - 20; i += 4) {
+          imgData.data[i] =
+            (imgData.data[i + 4] + imgData.data[i + 8] + imgData.data[i + 12]) /
+            4;
+
+          imgData.data[i + 1] =
+            (imgData.data[i + 5] +
+              imgData.data[i + 9] +
+              imgData.data[i + 13] +
+              imgData.data[i + 17]) /
+            4;
+          imgData.data[i + 2] =
+            (imgData.data[i + 6] +
+              imgData.data[i + 10] +
+              imgData.data[i + 14] +
+              imgData.data[i + 18]) /
+            4;
+        }
+        ctx.putImageData(imgData, 0, 0);
+      }
+
+      document.getElementById("btn-4").onclick = otherFilter;
+    </script>
+  </body>
+</html>

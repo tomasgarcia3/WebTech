@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 18</title>
+    <style>
+        img{
+            border: 5px solid
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Exercise 18: Animations</h1>
+    <p>Fix onload code in VS to have the animation running</p>
+    <img id="tiger" src="images/tiger1.jpg" alt="">
+    <hr />
+    <a href="sitemap.html">My Work in WebTech</a>
+    <script>
+      const slides = ["images/tiger1.jpg", "images/tiger2.jpg"];
+      const colors = ["green", "red"];
+      let i = 0;
+      function slideShow() {
+        let tigerImage = document.getElementById("tiger");
+        if (i == slides.length) {
+          i = 0;
+        }
+        tigerImage.src = slides[i];
+        tigerImage.style.borderColor = colors[i];
+        i++;
+        setTimeout(slideShow, 1000);
+      }
+      document.querySelector("body").onload = function () {
+        // slideShow();
+      };
+      //onload calls the function every time the page is loaded (body)
+    </script>
+  </body>
+</html>
