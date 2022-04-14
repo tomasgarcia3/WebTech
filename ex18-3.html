@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide Show</title>
+    <style>
+      img {
+        border: 10px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="" alt="tiger" />
+    <script>
+      const slides = [
+        "images/tiger1.jpg",
+        "images/tiger2.jpg",
+      ];
+      const colors = ["yellow", "red", "green", "blue"];
+      const imageTitles = ["", "", "", ""]
+      let i = 0;
+
+      function slideShow() {
+        if (i == slides.length) {
+          i = 0;
+        }
+        const image = document.querySelector("img");
+        image.src = slides[i];
+        image.style.borderColor = colors[i];
+        i++;
+
+        setTimeout(slideShow, 1000); // repeat function slideShow every 1000 microseconds (aka. one sec)
+      }
+      document.querySelector("body").onload = function () {
+        slideShow();
+      };
+    </script>
+  </body>
+</html>
