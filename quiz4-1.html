@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quiz 4-1</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.2rem;
+      }
+
+      div {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .red {
+        color: red;
+      }
+
+      form {
+        background-color: lightgray;
+        width: 80%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+
+      form div {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="center">Quiz 4-1</h1>
+    <div>
+      <p>Use internal JavaScript to implement the features below:</p>
+      <ul>
+        <li>
+          The user will enter two non-negative integers in the two text inputs.
+        </li>
+        <li>
+          When Calculate button is clicked, the
+          <span class="red">product</span> of
+          <strong>all the odd numbers</strong> between these two input integers
+          (inclusive) will be calculated and displayed. For example, if the two
+          numbers are 1 and 6, the product is 15 (because 15 = 1 x 3 x 5.)
+        </li>
+        <li>
+          For full points, you need to validate the inputs properly. (5 points)
+        </li>
+      </ul>
+    </div>
+    <div>
+      <form class="center">
+        <div>
+          <label
+            >From:
+            <input name="from" size="10" type="text" />
+          </label>
+          <label
+            >To:
+            <input name="to" size="10" type="text" />
+          </label>
+        </div>
+        <div>
+          <input name="calc" type="button" value="Calculate" />
+          <input name="reset" type="reset" value="Reset" />
+        </div>
+        <div>The product is ?.</div>
+      </form>
+    </div>
+  </body>
+</html>

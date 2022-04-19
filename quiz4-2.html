@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quiz 4-2</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.2rem;
+      }
+
+      div {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      form {
+        background-color: lightgray;
+        width: 80%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+
+      form div {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="center">
+      Quiz 4-2: Value of $1000 at 5% (or any input) interest rate in 10 years
+    </h1>
+    <div class="instruction">
+      <p>Use JavaScript to implement the following features:</p>
+      <ul>
+        <li>
+          User will enter one number for "Interest Rate". Clicking the button
+          will start an animation that changes the value of "Year" and "Money"
+          <strong>Every second</strong>. For example, after the first second,
+          "Year" should change to 2023 and "Money" should change to 1050.00
+          (assuming interest rate is 5%.)
+        </li>
+        <li>
+          <strong>Every second</strong>, "Year" should increase by 1 and "Money"
+          should increase based on the interest rate.
+        </li>
+        <li>
+          After year 2032, "Year" should be reset to 2022 and "Money" should be
+          reset to 1000.
+        </li>
+        <li>
+          Please always keep two decimal places. Hint:
+          <code
+            ><a href="https://www.w3schools.com/jsref/jsref_tofixed.asp"
+              >toFixed</a
+            ></code
+          >.
+        </li>
+      </ul>
+    </div>
+    <div class="center">
+      <form>
+        <div>
+          <label
+            >Year:
+            <input name="year" readonly size="10" type="text" value="2022" />
+          </label>
+        </div>
+        <div>
+          <label
+            >Money:
+            <input
+              name="money"
+              readonly
+              size="10"
+              type="text"
+              value="1000.00"
+            />
+          </label>
+        </div>
+        <div>
+          <label
+            >Interest Rate: <input name="rate" size="4" type="text" />%
+          </label>
+        </div>
+        <div>
+          <button type="button">Run</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
