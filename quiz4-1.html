@@ -57,23 +57,56 @@
       </ul>
     </div>
     <div>
-      <form class="center">
+      <form id="calculator" class="center">
         <div>
           <label
             >From:
-            <input name="from" size="10" type="text" />
+            <input id="num1" name="from" size="10" type="text" />
           </label>
           <label
             >To:
-            <input name="to" size="10" type="text" />
+            <input id="num2" name="to" size="10" type="text" />
           </label>
         </div>
         <div>
-          <input name="calc" type="button" value="Calculate" />
-          <input name="reset" type="reset" value="Reset" />
+          <input id="calc" name="calc" type="button" value="Calculate" />
+          <input id="reset" name="reset" type="reset" value="Reset" />
         </div>
-        <div>The product is ?.</div>
+        <div id="result">The product is ?.</div>
       </form>
     </div>
+    <script>
+      const myForm = document.getElementById("calculator");
+
+      function validate() {
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        // Not to worry about for now as said by professor during quiz.
+      }
+
+      function product() {
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        // console.log(num1, num2);
+        let result = 1;
+        for (let i = num1; i <= num2; i++) {
+          if (i % 2 != 0) {
+            result *= i;
+            // console.log(result);
+          }
+        }
+        document.getElementById("result").innerHTML =
+          "The product is " + result;
+      }
+
+      document.querySelector("#calc").onclick = function () {
+        validate()
+        product();
+      };
+
+      document.querySelector("#reset").onclick = document.getElementById("result").innerHTML =
+          "The product is "
+
+    </script>
   </body>
 </html>

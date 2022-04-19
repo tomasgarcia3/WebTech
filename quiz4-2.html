@@ -65,17 +65,25 @@
       </ul>
     </div>
     <div class="center">
-      <form>
+      <form id="calculator">
         <div>
           <label
             >Year:
-            <input name="year" readonly size="10" type="text" value="2022" />
+            <input
+              id="year"
+              name="year"
+              readonly
+              size="10"
+              type="text"
+              value="2022"
+            />
           </label>
         </div>
         <div>
           <label
             >Money:
             <input
+              id="money"
               name="money"
               readonly
               size="10"
@@ -86,13 +94,30 @@
         </div>
         <div>
           <label
-            >Interest Rate: <input name="rate" size="4" type="text" />%
+            >Interest Rate:
+            <input id="rate" name="rate" size="4" type="text" />%
           </label>
         </div>
         <div>
-          <button type="button">Run</button>
+          <button id="run" type="button">Run</button>
         </div>
       </form>
+      <script>
+        const myForm = document.getElementById("calculator");
+        function changeRate() {
+          const rate = document.getElementById("rate").value;
+          console.log(rate);
+          const year = document.getElementById("year").value;
+          const money = document.getElementById("money").value;
+          year += 1;
+          money = money * (1 + rate / 100);
+          setTimeout(changeRate, 1000);
+        }
+
+        document.getElementById("run").onclick = function () {
+          changeRate();
+        };
+      </script>
     </div>
   </body>
 </html>
