@@ -81,6 +81,15 @@
       function validate() {
         const num1 = document.getElementById("num1").value;
         const num2 = document.getElementById("num2").value;
+        if(isNaN(num1) || isNaN(num2)) {
+          alert("Must input numbers!");
+          return false
+        } else if (num1 > num2) {
+          alert("Second number must be greater than first");
+          return false
+        } else {
+          return true;
+        }
         // Not to worry about for now as said by professor during quiz.
       }
 
@@ -100,13 +109,15 @@
       }
 
       document.querySelector("#calc").onclick = function () {
-        validate()
-        product();
+        document.getElementById("result").innerHTML = "The product is ?";
+        if(validate() == true){
+          product();
+        }
       };
 
-      document.querySelector("#reset").onclick = document.getElementById("result").innerHTML =
-          "The product is "
-
+      document.querySelector("#reset").onclick = function () {
+        document.getElementById("result").innerHTML = "The product is ?";
+      };
     </script>
   </body>
 </html>

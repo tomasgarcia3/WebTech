@@ -103,15 +103,23 @@
         </div>
       </form>
       <script>
-        const myForm = document.getElementById("calculator");
+
+        const year = document.getElementById("year");
+        const money = document.getElementById("money");
+        const initialYear = year.value
+        const initialMoney = money.value
+
         function changeRate() {
           const rate = document.getElementById("rate").value;
-          console.log(rate);
-          const year = document.getElementById("year").value;
-          const money = document.getElementById("money").value;
-          year += 1;
-          money = money * (1 + rate / 100);
-          setTimeout(changeRate, 1000);
+          // console.log(rate);
+          year.value = (year.value*1)+1
+          money.value = (money.value * (1 + rate/ 100)).toFixed(2);
+          if(year.value <= 2032){
+            setTimeout(changeRate, 1000);
+          }else{
+            year.value = initialYear
+            money.value = initialMoney
+          }
         }
 
         document.getElementById("run").onclick = function () {
