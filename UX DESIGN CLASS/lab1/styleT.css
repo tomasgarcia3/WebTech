@@ -1,0 +1,72 @@
+nav ul
+{
+	
+	text-align: right;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 0;
+	margin-top: 0;
+/* cancels gap caused by top padding in Opera 7.54 */
+	margin-left: 0;
+	background-color: #006644;
+	color: white;
+	width: 100%;
+	font-family: Arial,Helvetica,sans-serif;
+	line-height: 18px;
+/* fixes Firefox 0.9.3 */
+}
+
+nav ul li
+{
+	display: inline;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 5px;
+	/* matches link padding except for left and right */
+	padding-top: 5px;
+	
+}
+
+nav ul li a
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	color: white;
+	text-decoration: none;
+	border-right: 1px solid #fff;
+}
+
+nav ul li a:hover
+{
+	background-color: darkgreen;
+	color: white;
+}
+
+
+/* active ensures that there is a line on the left for the first item only */
+nav .active { border-left: 1px solid #fff; }
+
+header h1 {
+	font-family:"Arial", Helvetica, sans-serif;
+	padding-left: 20px;
+	
+}
+
+#maintext {
+	font-family:"Arial", Helvetica, sans-serif;
+	padding-left: 20px;
+}
+
+img {
+	float:right
+}
+
+footer p {
+	border-top: 1px solid black;
+	padding-top: 10px;
+
+}
+
+
